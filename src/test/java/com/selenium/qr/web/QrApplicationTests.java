@@ -16,18 +16,19 @@ class QrApplicationTests {
     @Test
     public void testCreateQr() {
         try {
-            QrUtil.createQr("https://blog.csdn.net/qq_45453266/article/details/103285051", 500, 500);
+            QrUtil.createQr(new String("我是中文".getBytes("UTF-8"), "ISO-8859-1"), 500, 500);
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
+
     /**
      * 测试创建带logo的二维码
      */
     @Test
     public void testCreateQrWithLogo() {
         try {
-            QrUtil.createQrWithLogo("https://blog.csdn.net/qq_45453266/article/details/103285051", 500, 500,10);
+            QrUtil.createQrWithLogo("https://blog.csdn.net/qq_45453266/article/details/103285051", 500, 500, 10);
         } catch (Exception e) {
             e.printStackTrace();
         }
